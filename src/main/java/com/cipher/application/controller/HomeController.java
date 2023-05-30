@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/")
 @Api(tags = "Home API")
 public class HomeController {
     @ApiOperation(value = "Check deployment status",
@@ -14,6 +14,6 @@ public class HomeController {
             response = String.class)
     @GetMapping
     public String deployStatus(){
-        return "Deployed Successfully";
+        return "Welcome to the StarWars Film API.\nThe API has been Deployed Successfully";
     }
 }
